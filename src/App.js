@@ -12,7 +12,7 @@ export const StyledButton = styled.button`
   padding: 10px;
   border-radius: 50px;
   border: none;
-  background-color: var(--secondary);
+  background-color: blue;
   padding: 10px;
   font-weight: bold;
   color: var(--secondary-text);
@@ -220,7 +220,7 @@ function App() {
               opacity: 0.8,
               padding: 24,
               borderRadius: 24,
-              border: "1px  var(--secondary)",
+              border: "1px  blue",
               boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
             }}
           >
