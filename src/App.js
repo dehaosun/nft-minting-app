@@ -90,7 +90,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledLink = styled.a`
-  color: var(--secondary);
+  color: blue;
   text-decoration: none;
 `;
 
@@ -217,7 +217,7 @@ function App() {
             ai={"center"}
             style={{
               backgroundColor: "var(--accent)",
-              opacity: 0.8,
+              opacity: 0.65,
               padding: 24,
               borderRadius: 24,
               border: "1px  blue",
