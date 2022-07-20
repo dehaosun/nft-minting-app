@@ -241,7 +241,7 @@ function App() {
               }}
             >
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                {truncate(CONFIG.CONTRACT_ADDRESS, 15)}
+                合約地址:{truncate(CONFIG.CONTRACT_ADDRESS, 15)}...
               </StyledLink>
             </s.TextDescription>
             <span
