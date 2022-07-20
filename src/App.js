@@ -217,7 +217,7 @@ function App() {
             ai={"center"}
             style={{
               backgroundColor: "var(--accent)",
-              opacity: 0.6,
+              opacity: 0.8,
               padding: 24,
               borderRadius: 24,
               border: "1px  var(--secondary)",
