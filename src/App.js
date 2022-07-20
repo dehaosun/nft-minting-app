@@ -5,8 +5,13 @@ import { fetchData } from "./redux/data/dataActions";
 import * as s from "./styles/globalStyles";
 import styled from "styled-components";
 
-const truncate = (input, len) =>
-  input.length > len ? `${input.substring(0, len)}...` : input;
+
+const leftStr = (input, len) =>
+  Boolean(input) && (input.length >= len) ? `${input.substring(0, len)}` : input;
+
+const rightStr = (input, len) =>
+  Boolean(input) && (input.length >= len) ? `${input.substring(input.length-len, input.length)}` : input;
+
 
 export const StyledButton = styled.button`
   padding: 10px;
@@ -90,7 +95,7 @@ export const StyledImg = styled.img`
 `;
 
 export const StyledLink = styled.a`
-  color: blue;
+  color: #AAAAFF;
   text-decoration: none;
 `;
 
@@ -235,13 +240,18 @@ function App() {
               {data.totalSupply} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
+                  style={{ textAlign: "center", color: "var(--accent-text)", fontSize: 20}}
+                >
+                  你的錢包地址：{leftStr(blockchain.account,5)}*****{rightStr(blockchain.account,5)}
+                </s.TextDescription>
+            <s.TextDescription
               style={{
                 textAlign: "center",
-                color: "var(--primary-text)",
+                color: "white",
               }}
             >
               <StyledLink target={"_blank"} href={CONFIG.SCAN_LINK}>
-                合約地址:{truncate(CONFIG.CONTRACT_ADDRESS, 15)}...
+                <u>NFT合約地址：{leftStr(CONFIG.CONTRACT_ADDRESS, 15)}...</u>
               </StyledLink>
             </s.TextDescription>
             <span
@@ -291,17 +301,19 @@ function App() {
             ) : (
               <>
                 <s.TextTitle
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                  style={{ textAlign: "center", color: "var(--accent-text)", fontSize: 20 }}
                 >
                   每 {CONFIG.SYMBOL} 價格為 {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
-                  style={{ textAlign: "center", color: "var(--accent-text)" }}
+                  style={{ textAlign: "center", color: "var(--accent-text)", fontSize:20}}
                 >
                   價格不包含Gas Fee, 且每錢包地址只能買一個.
                 </s.TextDescription>
+
+
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
                 blockchain.smartContract === null ? (
@@ -414,6 +426,7 @@ function App() {
             style={{
               textAlign: "center",
               color: "var(--primary-text)",
+              fontSize: 15
             }}
           >
             請確認有連接到正確的網路 ({CONFIG.NETWORK.NAME} Mainnet) 以及你信任這個合約地址. 請注意, 任何NFT一經購買, 將無法退換貨!
@@ -423,6 +436,7 @@ function App() {
             style={{
               textAlign: "center",
               color: "var(--primary-text)",
+              fontSize: 15
             }}
           >
             為了合約成功執行，Gas Limit預設為 {CONFIG.GAS_LIMIT}. 如果你不了解, 請勿輕易調整Gas Limit.
