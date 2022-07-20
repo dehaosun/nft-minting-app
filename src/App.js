@@ -414,9 +414,7 @@ function App() {
               color: "var(--primary-text)",
             }}
           >
-            Please make sure you are connected to the right network (
-            {CONFIG.NETWORK.NAME} Mainnet) and the correct address. Please note:
-            Once you make the purchase, you cannot undo this action.
+            請確認有連接到正確的網路 ({CONFIG.NETWORK.NAME} Mainnet) 以及你信任這個合約地址. 請注意, 任何NFT一經購買, 將無法退換貨!
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextDescription
@@ -425,9 +423,7 @@ function App() {
               color: "var(--primary-text)",
             }}
           >
-            We have set the gas limit to {CONFIG.GAS_LIMIT} for the contract to
-            successfully mint your NFT. We recommend that you don't lower the
-            gas limit.
+            為了合約成功執行，Gas Limit預設為 {CONFIG.GAS_LIMIT}. 如果你不了解, 請勿輕易調整Gas Limit.
           </s.TextDescription>
         </s.Container>
       </s.Container>
