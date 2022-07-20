@@ -300,7 +300,7 @@ function App() {
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Excluding gas fees.
+                  價格不包含Gas Fee, 且每錢包地址只能買一個.
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
