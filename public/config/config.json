@@ -1,14 +1,14 @@
 {
-  "CONTRACT_ADDRESS": "0x00bE005F262F4c085A2FC3629a54eb8A8Cf33cDe",
-  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x00be005f262f4c085a2fc3629a54eb8a8cf33cde",
+  "CONTRACT_ADDRESS": "0x79623a42DF513bB07FfADdA3ACe3aE0d9bfB1243",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/address/0x79623a42DF513bB07FfADdA3ACe3aE0d9bfB1243",
   "NETWORK": {
     "NAME": "Rinkeby",
     "SYMBOL": "ETH",
     "ID": 4
   },
   "NFT_NAME": "The IKI NFT",
-  "SYMBOL": "IKINFT",
-  "MAX_SUPPLY": 10,
+  "SYMBOL": "IKI NFT",
+  "MAX_SUPPLY": 111,
   "WEI_COST": 10000000000000,
   "DISPLAY_COST": 0.00001,
   "GAS_LIMIT": 285000,
