@@ -415,7 +415,7 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               alt={"example"}
-              src={"/config/images/example.gif"}
+              src={"/config/images/example2.gif"}
               style={{ border: "1px  var(--secondary)" }}
             />
           </s.Container>
